@@ -1,0 +1,8 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# Don't commit the actual target PDF or wordlists
+*.pdf
+*.txt
+!README.md
