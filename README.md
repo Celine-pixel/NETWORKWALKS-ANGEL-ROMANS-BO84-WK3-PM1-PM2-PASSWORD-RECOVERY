@@ -112,10 +112,9 @@ from an encrypted PDF and recovering the password using **John the Ripper**, run
     ├── 04-johnny-settings-john-exe.png
     ├── 05-onlinehashcrack-extract.png
     ├── 06-networkwalks-hash-calculator.png
-    ├── 07-networkwalks-password-cracker.png
-    ├── 08-dictionary-attack-lab-start.png
-    ├── 09-dictionary-attack-lab-success.png
-    └── 10-unlocked-pdf-flag.png
+    ├── 07-dictionary-attack-lab-start.png
+    ├── 08-dictionary-attack-lab-success.png
+    └── 09-unlocked-pdf-flag.png
 ```
 
 ## Disclaimer
