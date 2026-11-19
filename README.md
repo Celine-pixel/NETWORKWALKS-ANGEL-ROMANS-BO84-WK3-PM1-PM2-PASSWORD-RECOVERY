@@ -9,7 +9,7 @@ from an encrypted PDF and recovering the password using **John the Ripper**, run
 | Item | Detail |
 |---|---|
 | Target file | `My Locked PDF1.pdf` (password-protected PDF) |
-| Tool | John the Ripper 1.9.0-jumbo-1 (via Johnny GUI) |
+| Tool | John the Ripper 1.9.0-jumbo-1 (via Johnny GUI), Password Cracker, and Hash Calculator|
 | Platform | **Windows** (`C:/Users/Celine/Downloads/New folder/john-1.9.0-jumbo-1-win64/run/john.exe`) |
 | Attack type | Dictionary attack |
 | Hash format | PDF (`$pdf$4*4*128*...`) |
@@ -51,12 +51,29 @@ from an encrypted PDF and recovering the password using **John the Ripper**, run
    John the Ripper matched the hash against the wordlist and cracked it:
 
    ```
-   [+] MATCH password1 ✓
+   [+] MATCH good-luck ✓
    ```
 
    Johnny's **Passwords** tab showed the cracked value directly against the hash entry.
 
-5. **Unlock the PDF**
+
+   Password Cracker matched the hash against the wordlist and cracked it:
+
+   ```
+   [+] MATCH password1 ✓
+   ```
+
+   Networkwalk Password Cracker **Passwords** tab showed the cracked value directly against the hash entry.
+
+
+6. **Unlock the PDF**
+   Re-opened `My Locked PDF1.pdf`, entered `good-luck` at the password prompt, and the
+   document opened — a "Congratulations!" page confirming the flag:
+
+   ```
+   nw{cybersecurity_flag_captured_2608}
+   ```
+
    Re-opened `My Locked PDF1.pdf`, entered `password1` at the password prompt, and the
    document opened — a "Congratulations!" page confirming the flag:
 
@@ -70,8 +87,8 @@ from an encrypted PDF and recovering the password using **John the Ripper**, run
 - **Johnny** — GUI front-end for John the Ripper, used instead of the raw CLI
 - **pdf2john-compatible hash extractor** (Online HashCrack) — to pull the crackable
   hash out of the encrypted PDF without a Linux environment
-- **Networkwalks Hash Calculator** — secondary tool to verify PDF encryption
-  parameters and re-derive the hash locally in-browser
+- **Networkwalks Hash Calculator** — to pull the crackable hash for the second PDF
+- **Networkwalks Password Cracker** — to crack the password for the second PDF
 - Microsoft Edge PDF viewer — to verify lock/unlock state of the file
 
 ## Note on platform
@@ -95,9 +112,10 @@ from an encrypted PDF and recovering the password using **John the Ripper**, run
     ├── 04-johnny-settings-john-exe.png
     ├── 05-onlinehashcrack-extract.png
     ├── 06-networkwalks-hash-calculator.png
-    ├── 07-dictionary-attack-lab-start.png
-    ├── 08-dictionary-attack-lab-success.png
-    └── 09-unlocked-pdf-flag.png
+    ├── 07-networkwalks-password-cracker.png
+    ├── 08-dictionary-attack-lab-start.png
+    ├── 09-dictionary-attack-lab-success.png
+    └── 10-unlocked-pdf-flag.png
 ```
 
 ## Disclaimer
